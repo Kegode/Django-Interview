@@ -1,0 +1,28 @@
+{% extends "employee_register/base.html"%}
+
+{% block content %}
+<table class="table table-borderless">
+    <thead>
+        <td>Full Name</td>
+        <td>Email</td>
+        <td>IMAGE</td>
+    </thead>
+    <tbody>
+        {% for employee in employee_list %}
+        <tr>
+            <td>{{employee.fullname}}</td>
+            <td>{{employee.email}}</td>
+            
+            <td>{{employee.file}}</td>
+            <td>
+                <a href="" class="btn btn-success badge">EDIT</a>
+            </td>
+            <td>
+                <a href="" class="btn btn-danger badge">DELETE</a>
+            </td>
+
+        </tr>
+        {% endfor%}
+    </tbody>
+</table>
+    {% endblock content %}

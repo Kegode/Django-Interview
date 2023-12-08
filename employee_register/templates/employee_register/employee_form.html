@@ -1,0 +1,12 @@
+{% extends "employee_register/base.html" %}
+
+{% load crispy_forms_tags%}
+
+{% block content %}
+<form action="" method="post" autocomplete="off" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-submit">SUBMIT</button>
+</form>
+
+{% endblock content %}
